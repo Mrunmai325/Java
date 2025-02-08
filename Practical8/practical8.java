@@ -1,15 +1,15 @@
 class PatternPrinting{
   public static void main(String[] args){
-	  PatternPrinting p=new PatternPrinting();
-	  System.out.print("-----------------------------------------------------\n");
-	  p.DisplayPattern1(2);
-	  System.out.print("-----------------------------------------------------\n");
-	  p.DisplayPattern2(2);
-	  System.out.print("-----------------------------------------------------\n");
-	  p.DisplayPattern3(2);
-	  System.out.print("-----------------------------------------------------\n");
-	  p.DisplayPattern4(2);
-	  System.out.print("-----------------------------------------------------\n");
+    PatternPrinting p=new PatternPrinting();
+    System.out.print("-----------------------------------------------------\n");
+    p.DisplayPattern1(2);
+    System.out.print("-----------------------------------------------------\n");
+    p.DisplayPattern2(2);
+    System.out.print("-----------------------------------------------------\n");
+    p.DisplayPattern3(2);
+    System.out.print("-----------------------------------------------------\n");
+    p.DisplayPattern4(2);
+    System.out.print("-----------------------------------------------------\n");
   }
   
 /*------------------------------------------------------------------------------------*/
@@ -43,70 +43,70 @@ class PatternPrinting{
     return;
   }
   void Lines2(int ln, int size){
-	  if(ln<=size){
-	  	Space2(size-ln+1);
-	  	Stars2(ln);
-	  	System.out.print("\n");
-	  	Lines2(ln+1, size);
-	  }
-	  if(ln==size+1){
-	  	Plus2(ln);
-	  	System.out.print("\n");
-	  	return ;
-	  }
-	  Space2(size-ln+1);
-	  Slash2(ln);
-	  System.out.print("\n");
-	  return;
+    if(ln<=size){
+      Space2(size-ln+1);
+      Stars2(ln);
+      System.out.print("\n");
+      Lines2(ln+1, size);
+    }
+    if(ln==size+1){
+      Plus2(ln);
+      System.out.print("\n");
+      return;
+    }
+    Space2(size-ln+1);
+    Slash2(ln);
+    System.out.print("\n");
+    return;
   }                                                        //     *
   void Space2(int space){                                  //    **
-	  if(space>0){                                           //   ***
-	  	System.out.print(" ");                               //  ++++  size=3
-	  	Space2(space-1);                                     //   ///
-	  }                                                      //    //
-	  return;                                                //     /
+    if(space>0){                                           //   ***
+      System.out.print(" ");                               //  ++++  size=3
+      Space2(space-1);                                     //   ///
+    }                                                      //    //
+    return;                                                //     /
   } 
   void Stars2(int ln){
-	  if(ln>0){
-	  	System.out.print("*");
-	  	Stars2(ln-1);
-	  }
-	  return;
+    if(ln>0){
+      System.out.print("*");
+      Stars2(ln-1);
+    }
+    return;
   }
   void Plus2(int plus){
-  	if(plus>0){
-  		System.out.print("+");
-  		Plus2(plus-1);
-  	}
-  	return;
+    if(plus>0){
+      System.out.print("+");
+      Plus2(plus-1);
+    }
+    return;
   }		
   void Slash2(int slash){
-  	if(slash>0){
-  		System.out.print("/");
-  		Slash2(slash-1);
-  	}
-  	return;
+    if(slash>0){
+      System.out.print("/");
+      Slash2(slash-1);
+    }
+    return;
   }
 
  /*-----------------------------------------------------------------------------------------------*/
  
   void DisplayPattern3(int size){
     size=2*size-1;
-	  PatternStar(1, size);
-	  PatternPlus(1, size);
-	  return;
+    PatternStar(1, size);
+    PatternPlus(1, size);
+    return;
   }
   void PatternStar(int ln, int size){
-	  if(ln<=size/2){
-	  	Space3((size+1)/2-ln);
-	  	Star3(2*ln-1);
-	  	System.out.print("\n");
-	  	PatternStar(ln+1, size);
-	  }
-	  Space3((size+1)/2-ln);
-	  Star3(2*ln-1);
-	  System.out.print("\n");
-	  return;
+    if(ln<=size/2){
+      Space3((size+1)/2-ln);
+      Star3(2*ln-1);
+      System.out.print("\n");
+      PatternStar(ln+1, size);
+    }
+    Space3((size+1)/2-ln);
+    Star3(2*ln-1);
+    System.out.print("\n");
+    return;
   }
   void Space3(int spaces){
     if(spaces>0){
